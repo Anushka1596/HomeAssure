@@ -2,16 +2,29 @@
   <ion-header-bar class="bar-calm" align="center">
     <h1 class="title">Add Customer</h1>
   </ion-header-bar>
-  <ion-content class="has-header padding has-subheader">
-    <div class="container">
+  <ion-content class="has-header padding has-subheader has-footer">
+    <form (ngSubmit)="logForm()">
+      <ion-item>
+        <label class="item">
+          Customer Name :
 
-    </div>
+          <input type="text" ng-model="data.username">
+
+        </label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Description</ion-label>
+        <ion-textarea [(ngModel)]="todo.description" name="description"></ion-textarea>
+      </ion-item>
+      <button ion-button type="submit" block>Add Todo</button>
+      </ion-list>
+    </form>
     <div class="container">
       <div class="row">
-        <div class="col col-30">
-          <label>Customer Name</label>
+        <div class="col col-20">
+          <ion-label>Customer Name :</ion-label>
         </div>
-        <div class="col col-70">
+        <div class="col col-100">
           <input type="text" />
         </div>
       </div>
@@ -71,7 +84,7 @@
         <button class="button btn-calm">Reset</button>
       </div>
       <div class="col col-50">
-        <button class="button btn-calm">Save and Proceed</button>
+        <button class="button btn-calm" ng-click="Save()">Save and Proceed</button>
       </div>
     </div>
   </ion-content>

@@ -24,4 +24,10 @@ app.controller('AddProductCtrl', ['$scope', '$state',
     $scope.addProduct = function () {
       $state.go('app.Sellkit.AddProductDetails');
     }
+    $scope.gotokit = function () {
+      $state.go('app.Sellkit.kitDetail');
+    }
+    $scope.backtoCustomer = function () {
+      $state.go('app.Sellkit.AddCustomer');
+    }
   }])
