@@ -1,0 +1,119 @@
+<ion-view view-title="Add Customer" name="profile-view">
+  <ion-header-bar class="bar-calm" align="center">
+    <h1 class="title">Add Product Details</h1>
+  </ion-header-bar>
+  <ion-content class="has-header padding has-subheader has-footer">
+    <div class="container">
+
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col col-30">
+          <label>Product Category :</label>
+        </div>
+        <div class="col col-70">
+          <select>
+            <option>Blue</option>
+            <option selected>Green</option>
+            <option>Red</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-30">
+          <label>Invoice Available :</label>
+        </div>
+        <div class="col col-70">
+          <ion-checkbox disabled="true">Yes</ion-checkbox>
+          <span>
+            <ion-checkbox disabled="true">No</ion-checkbox>
+          </span>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-30">
+          <label>Brand Name :</label>
+        </div>
+        <div class="col col-30">
+          <select>
+            <option>Blue</option>
+            <option selected>Green</option>
+            <option>Red</option>
+          </select>
+
+        </div>
+        <div class="col col-20">
+          <input type="text" />
+        </div>
+        <div class="col col-20">
+          <input type="text" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-30">
+          <label>Model Name :</label>
+        </div>
+        <div class="col col-30">
+          <select>
+            <option>Blue</option>
+            <option selected>Green</option>
+            <option>Red</option>
+          </select>
+
+        </div>
+        <div class="col col-20">
+          <input type="text" />
+        </div>
+        <div class="col col-20">
+          <input type="text" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-30">
+          <label>Purchase Date : </label>
+        </div>
+        <div class="col col-70">
+          <ion-item>
+            <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="purchaseDate"></ion-datetime>
+          </ion-item>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-30">
+          <label>Serial No :</label>
+        </div>
+        <div class="col col-70">
+          <input type="text" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-30">
+          <label>Price :</label>
+        </div>
+        <div class="col col-70">
+          <input type="text" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-50">
+          <ion-label>Invoice Image :</ion-label>
+        </div>
+        <div class="col col-50">
+          <input type="text" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-40">
+        <button class="button btn-calm" align="right" ng-click="backToList()">Back</button>
+      </div>
+      <div class="col col-40">
+        <button class="button btn-calm" align="right">Cancel</button>
+      </div>
+      <div class="col col-40">
+        <button class="button btn-calm" align="left">Add</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
