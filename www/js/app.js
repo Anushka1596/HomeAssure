@@ -59,13 +59,13 @@ var app = angular.module('HomeAssure', ['ionic', 'ui.router'])
         .state('app.Sellkit.kitDetail', {
           url: '/kitDetail',
           templateUrl: 'Sellkit/KitDetail/KitDetail.html',
-          controller: 'SellkitCtrl'
+          controller: 'KitDetailCtrl'
         })
 
         .state('app.Sellkit.payments', {
           url: '/payments',
           templateUrl: 'Sellkit/Payment/Payment.html',
-          controller: 'SellkitCtrl'
+          controller: 'PaymentCtrl'
         })
 
         //Sold kit
