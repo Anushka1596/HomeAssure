@@ -5,13 +5,13 @@
         <h1 class="title">Enter Kit Detail</h1>
   </ion-header-bar>
   <ion-content class="has-header padding has-subheader has-footer has-subfooter">
-    <form (ngSubmit)="logForm()">
+    <form>
       <ion-list>
         <ion-item>
           <label>
             Mobile Number :
           </label>
-          <input type="number" ng-model="data.username" placeholder="Enter Contact ..">
+          <input type="number" data-ng-model="customer.contact" placeholder="Enter Contact ..">
         </ion-item>
 
         <div class="row">
@@ -24,18 +24,18 @@
           <label>
             OTP :
           </label>
-          <input type="number" ng-model="data.username" placeholder="Enter OTP ..">
+          <input type="number" data-ng-model="kitDetails.OTP" placeholder="Enter OTP ..">
         </ion-item>
         <ion-item>
           <label>
             Activation Code :
           </label>
-          <input type="number" ng-model="data.username" placeholder="Enter OTP ..">
+          <input type="number" ng-model="kitDetails.activationCode" placeholder="Enter OTP ..">
         </ion-item>
 
         <div class="row">
           <div class="col col-50">
-            <button class="button btn-calm">Reset</button>
+            <button class="button btn-calm" ng-click="reset()">Reset</button>
           </div>
           <div class="col col-50">
             <button class="button btn-calm" ng-click="gotopayments()">Save and Proceed</button>

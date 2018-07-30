@@ -1,7 +1,27 @@
 app.controller('PaymentCtrl', ['$scope', '$state', '$stateParams',
   function ($scope, $state, $stateParams) {
+    var customer = $stateParams.customer;
+    var productList = $stateParams.productList;
+    var kitDetails = $stateParams.Kitdetail;
+    $scope.paymentDetail = {};
+
+    $scope.submit = function () {
+      var paymentDetails = {};
+      paymentDetails.pay_method = $scope.paymentDetail.pay_method;
+      paymentDetails.pay_amount = $scope.paymentDetail.pay_amount;
+      paymentDetails.pay_comment = $scope.paymentDetail.pay_comment;
+      $scope.paymentDetail = paymentDetails;
+      console.log(customer);
+      console.log(productList);
+      console.log(kitDetails);
+      console.log(paymentDetails);
+
+    }
     $scope.backtokit = function () {
-      $state.go('app.Sellkit.kitDetail');
+      $state.go('app.Sellkit.kitDetail', { customer: customer, productList: productList, productDetails: null, Kitdetail: kitDetails, payment: $scope.paymentDetail });
     };
+    $scope.reset = function () {
+      $scope.paymentDetails = {};
+    }
 
   }]);

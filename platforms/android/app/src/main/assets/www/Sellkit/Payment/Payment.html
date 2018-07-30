@@ -4,48 +4,52 @@
       << </button>
         <h1 class="title">Payment</h1>
   </ion-header-bar>
-  <ion-content class="has-header padding has-subheader">
-    <div class="container">
-
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col col-30" align="right">
-          <label>Payment Method</label>
-        </div>
-        <div class="col col-70">
-          <select>
-            <option>Blue</option>
-            <option selected>Green</option>
-            <option>Red</option>
+  <ion-content class="has-header padding has-subheader has-footer has-subfooter">
+    <form>
+      <ion-list>
+        <ion-item>
+          <label>
+            Payment Method :
+          </label>
+          <select ng-model="paymentDetail.pay_method">
+            <option>Cash</option>
+            <option selected>Debit Card</option>
+            <option>Credit Card</option>
           </select>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col col-30">
-          <label>Amount</label>
-        </div>
-        <div class="col col-70">
-          <input type="text" />
-        </div>
-      </div>
+        </ion-item>
+        <ion-item>
+          <label>
+            Amount :
+          </label>
+          <input type="number" data-ng-model="paymentDetail.pay_amount" placeholder="Enter Amount ..">
+        </ion-item>
+        <ion-item>
+          <label>
+            Comment :
+          </label>
+          <input type="text" ng-model="paymentDetail.pay_comment" placeholder="Enter Comment ..">
+        </ion-item>
+        <ion-item>
+          <div class="row">
+            <div class="col col-100" align="center">
+              <label>Image(optional)</label>
+              <span>
+                <ion-icon name="happy"></ion-icon>
+              </span>
+            </div>
+          </div>
+        </ion-item>
 
-      <div class="row">
-        <div class="col col-100" align="center">
-          <label>Image(optional)</label>
-          <span>
-            <ion-icon name="happy"></ion-icon>
-          </span>
+        <div class="row">
+          <div class="col col-50">
+            <button class="button btn-calm" ng-click="reset()">Reset</button>
+          </div>
+          <div class="col col-50">
+            <button class="button btn-calm" ng-click="submit()">Submit</button>
+          </div>
         </div>
 
-      </div>
-      <div class="row">
-        <div class="col col-50">
-          <button class="button btn-calm">Reset</button>
-        </div>
-        <div class="col col-50">
-          <button class="button btn-calm">Submit</button>
-        </div>
-      </div>
+      </ion-list>
+    </form>
   </ion-content>
 </ion-view>

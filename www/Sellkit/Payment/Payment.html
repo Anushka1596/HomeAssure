@@ -5,29 +5,29 @@
         <h1 class="title">Payment</h1>
   </ion-header-bar>
   <ion-content class="has-header padding has-subheader has-footer has-subfooter">
-    <form (ngSubmit)="logForm()">
+    <form>
       <ion-list>
         <ion-item>
           <label>
             Payment Method :
           </label>
-          <select>
-            <option>Blue</option>
-            <option selected>Green</option>
-            <option>Red</option>
+          <select ng-model="paymentDetail.pay_method">
+            <option>Cash</option>
+            <option selected>Debit Card</option>
+            <option>Credit Card</option>
           </select>
         </ion-item>
         <ion-item>
           <label>
             Amount :
           </label>
-          <input type="number" ng-model="data.username" placeholder="Enter Amount ..">
+          <input type="number" data-ng-model="paymentDetail.pay_amount" placeholder="Enter Amount ..">
         </ion-item>
         <ion-item>
           <label>
             Comment :
           </label>
-          <input type="text" ng-model="data.username" placeholder="Enter Comment ..">
+          <input type="text" ng-model="paymentDetail.pay_comment" placeholder="Enter Comment ..">
         </ion-item>
         <ion-item>
           <div class="row">
@@ -42,10 +42,10 @@
 
         <div class="row">
           <div class="col col-50">
-            <button class="button btn-calm">Reset</button>
+            <button class="button btn-calm" ng-click="reset()">Reset</button>
           </div>
           <div class="col col-50">
-            <button class="button btn-calm">Submit</button>
+            <button class="button btn-calm" ng-click="submit()">Submit</button>
           </div>
         </div>
 

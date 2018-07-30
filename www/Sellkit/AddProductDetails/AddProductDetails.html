@@ -3,13 +3,13 @@
     <h1 class="title">Add Product Details</h1>
   </ion-header-bar>
   <ion-content class="has-header padding has-subheader has-footer">
-    <form (ngSubmit)="logForm()">
+    <form>
       <ion-list>
         <ion-item>
           <label>
             Product Category :
           </label>
-          <select>
+          <select ng-model="product.category">
             <option>Blue</option>
             <option selected>Green</option>
             <option>Red</option>
@@ -20,11 +20,10 @@
             <label>Invoice Available :</label>
           </div>
           <div class="col col-70">
-            <ion-checkbox disabled="true">Yes</ion-checkbox>
-
-            <ion-checkbox disabled="true">No</ion-checkbox>
-
+            <ion-checkbox disabled="true" value="Yes" name="group1">Yes</ion-checkbox>
+            <ion-checkbox disabled="true" value="No" name="group1">No</ion-checkbox>
           </div>
+
         </ion-item>
         <ion-item>
           <div class="row">
@@ -32,20 +31,21 @@
               <label>Brand Name :</label>
             </div>
             <div class="col col-30">
-              <select>
+              <select ng-model="product.brandName">
                 <option>Blue</option>
                 <option selected>Green</option>
                 <option>Red</option>
               </select>
 
             </div>
-            <div class="col col-20">
-              <input type="text" />
-            </div>
-            <div class="col col-20">
-              <input type="text" />
-            </div>
-          </div>
+        </ion-item>
+        <div class="col col-20">
+          <input type="text" ng-model="product.brandOthers" placeholder="Others" />
+        </div>
+        <div class="col col-20">
+          <input type="text" ng-model="product.brandText" placeholder="Text" />
+        </div>
+        </div>
         </ion-item>
 
         <ion-item>
@@ -54,7 +54,7 @@
               <label>Model Name :</label>
             </div>
             <div class="col col-30">
-              <select>
+              <select ng-model="product.model">
                 <option>Blue</option>
                 <option selected>Green</option>
                 <option>Red</option>
@@ -62,10 +62,10 @@
 
             </div>
             <div class="col col-20">
-              <input type="text" />
+              <input type="text" ng-model="product.modelOthers" placeholder="Others" />
             </div>
             <div class="col col-20">
-              <input type="text" />
+              <input type="text" ng-model="product.modelText" placeholder="Text" />
             </div>
           </div>
         </ion-item>
@@ -73,20 +73,20 @@
           <label>
             Purchase Date :
           </label>
-          <input type="text" ng-model="data.username" placeholder="Enter Customer Name ..">
+          <input type="text" ng-model="product.purchaseDate" placeholder="Enter Customer Name ..">
         </ion-item>
         <ion-item>
           <label>
             Serial No :
           </label>
-          <input type="text" ng-model="data.username" placeholder="Enter Serial No ..">
+          <input type="text" ng-model="product.serialno" placeholder="Enter Serial No ..">
 
         </ion-item>
         <ion-item>
           <label>
             Price :
           </label>
-          <input type="text" ng-model="data.username" placeholder="Enter Price ..">
+          <input type="text" ng-model="product.price" placeholder="Enter Price ..">
 
         </ion-item>
         <ion-item align="center">
@@ -103,7 +103,7 @@
         <button class="button btn-calm" align="right" ng-click="backToList()">Back</button>
       </div>
       <div class="col col-40">
-        <button class="button btn-calm" align="right">Cancel</button>
+        <button class="button btn-calm" align="right" ng-click="reset()">Reset</button>
       </div>
       <div class="col col-40">
         <button class="button btn-calm" align="left" ng-click="productAdded()">Add</button>
