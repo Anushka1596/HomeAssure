@@ -37,7 +37,7 @@ app.controller('HomeCtrl', ['$scope','$state','ionicDatePicker',function ($scope
     $scope.toDate = null;
   };
 
-  values = [1000,2000,500,200,300,100,700,500];
+  values = [5000,2000,5000,2000,3000,1000,7000,5000];
   drawChart(values,"#chart",10); // You can adjust the margin between each bar by changing 10 to whatever you like
 
   function drawChart(data,selector,padding){
