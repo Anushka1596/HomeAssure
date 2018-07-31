@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var app = angular.module('HomeAssure', ['ionic', 'ui.router'])
+var app = angular.module('HomeAssure', ['ionic', 'ionic-datepicker','ui.router'])
   .run(function ($ionicPlatform) {
     $ionicPlatform.ready(function () {
       // Stuff in here
@@ -31,6 +31,11 @@ var app = angular.module('HomeAssure', ['ionic', 'ui.router'])
         .state('app.home', {
           url: '/home',
           templateUrl: 'Home/home.html',
+          controller: 'HomeCtrl'
+        })
+        .state('app.Filter',{
+          url: '/filter',
+          templateUrl: 'Home/Filter.html',
           controller: 'HomeCtrl'
         })
 
@@ -93,4 +98,24 @@ var app = angular.module('HomeAssure', ['ionic', 'ui.router'])
         })
     }
   ])
+  .config(function (ionicDatePickerProvider) {
+    var datePickerObj = {
+      inputDate: new Date(),
+      titleLabel: 'Select a Date',
+      setLabel: 'Set',
+      todayLabel: 'Today',
+      closeLabel: 'Close',
+      mondayFirst: false,
+      weeksList: ["S", "M", "T", "W", "T", "F", "S"],
+      monthsList: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
+      templateType: 'popup',
+      from: new Date(2012, 8, 1),
+      to: new Date(2050, 8, 1),
+      showTodayButton: true,
+      dateFormat: 'dd/MM/yyyy',
+      closeOnSelect: false,
+      disableWeekdays: []
+    };
+    ionicDatePickerProvider.configDatePicker(datePickerObj);
+  })
 

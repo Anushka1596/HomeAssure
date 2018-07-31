@@ -33,6 +33,11 @@ var app = angular.module('HomeAssure', ['ionic', 'ionic-datepicker','ui.router']
           templateUrl: 'Home/home.html',
           controller: 'HomeCtrl'
         })
+        .state('app.Filter',{
+          url: '/filter',
+          templateUrl: 'Home/Filter.html',
+          controller: 'HomeCtrl'
+        })
 
         //Sell Kit
         .state('app.Sellkit', {
@@ -105,9 +110,9 @@ var app = angular.module('HomeAssure', ['ionic', 'ionic-datepicker','ui.router']
       monthsList: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
       templateType: 'popup',
       from: new Date(2012, 8, 1),
-      to: new Date(2018, 8, 1),
+      to: new Date(2050, 8, 1),
       showTodayButton: true,
-      dateFormat: 'dd MMMM yyyy',
+      dateFormat: 'dd/MM/yyyy',
       closeOnSelect: false,
       disableWeekdays: []
     };
