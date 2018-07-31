@@ -36,5 +36,25 @@ app.controller('HomeCtrl', ['$scope','$state','ionicDatePicker',function ($scope
     $scope.fromDate = null;
     $scope.toDate = null;
   };
+
+  values = [1000,2000,500,200];
+  drawChart(values,"#chart",10); // You can adjust the margin between each bar by changing 10 to whatever you like
+
+  function drawChart(data,selector,padding){
+  var max = Math.max.apply(Math, data);
+	var chart = document.querySelector(selector);
+	var barwidth = ((chart.offsetWidth-(values.length-1)*padding-(data.length)*10)/data.length);
+	var sum = data.reduce(function(pv, cv) { return pv + cv; }, 0);
+	var left = 0;
+	for (var i = 0; i< data.length;i++){
+	  var newbar = document.createElement('div');
+	  newbar.setAttribute("class", "bar");
+	  newbar.style.width=barwidth+"px";
+	  newbar.style.height=((data[i]/max)*100)+"%";
+	  newbar.style.left=left+"px";
+	  chart.appendChild(newbar);
+	  left += (barwidth+padding+10);
+	}
+};
   
 }]);
