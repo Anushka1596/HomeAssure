@@ -10,11 +10,11 @@
     <div class = "list">
         <div>From Date:</div>
             <label class = "item item-input" > 
-               <input type = "text" placeholder = "dd/mm/yyyy" ng-model="fromDate" ng-click="openDatePicker1()"/>
+               <input type = "date" placeholder = "mm/dd/yyyy" ng-model="fromDate" ng-click="openDatePicker1()" readonly/>
             </label>
          <div>To Date:</div>
             <label class = "item item-input">
-               <input type = "text" placeholder = "dd/mm/yyyy" ng-model="toDate" ng-click="openDatePicker2()"/>
+               <input type = "date" placeholder = "mm/dd/yyyy" ng-model="toDate" ng-click="openDatePicker2()" readonly/>
             </label>
         </div>
         <div align="center" padding="20px">

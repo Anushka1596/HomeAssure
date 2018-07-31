@@ -78,3 +78,5 @@ span.psw {
   margin: 1%;
   overflow:hidden;
 }
+  .datepickerdemoCalendar label {
+    font-size: x-small; }

@@ -36,4 +36,5 @@ app.controller('HomeCtrl', ['$scope','$state','ionicDatePicker',function ($scope
     $scope.fromDate = null;
     $scope.toDate = null;
   };
+  
 }]);
