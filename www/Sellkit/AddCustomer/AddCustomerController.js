@@ -1,6 +1,9 @@
 app.controller('AddCustomerCtrl', ['$scope', '$state', '$stateParams',
   function ($scope, $state, $stateParams) {
     $scope.customer = {};
+    var kitDetail = $stateParams.Kitdetail;
+    var payment = $stateParams.payment;
+    var productList = $stateParams.productList;
     if ($stateParams.customer != null || $stateParams.customer != undefined) {
       $scope.customer = $stateParams.customer;
       console.log($scope.customer);
@@ -21,7 +24,8 @@ app.controller('AddCustomerCtrl', ['$scope', '$state', '$stateParams',
       customer.cust_pin = $scope.customer.cust_pin;
       $scope.customer = customer;
       //console.log(customer);
-      $state.go('app.Sellkit.AddProduct', { customer: $scope.customer, productList: null, productDetails: null, Kitdetail: null, payment: null });
+      var kitDetail = $stateParams.Kitdetail;
+      $state.go('app.Sellkit.AddProduct', { customer: $scope.customer, productList: productList, Kitdetail: kitDetail, payment: payment });
     }
 
   }])

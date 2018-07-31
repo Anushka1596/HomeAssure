@@ -1,6 +1,24 @@
 <ion-view view-title="Add Customer" name="profile-view">
   <ion-header-bar class="bar-calm" align="center">
     <h1 class="title">Add Customer</h1>
+    <div>
+      <ion-tabs class="tabs-stipped tabs-top tabs-dark">
+
+        <ion-tab title="Add Customer >>">
+          <ion-nav-view></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Add Product >>">
+          <ion-nav-view></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Enter Kit Details >>">
+          <ion-nav-view></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Payments">
+          <ion-nav-view></ion-nav-view>
+        </ion-tab>
+
+      </ion-tabs>
+    </div>
   </ion-header-bar>
   <ion-content class="has-header padding has-subheader has-footer has-subfooter">
     <form>
@@ -9,19 +27,19 @@
           <label>
             Customer Name :
           </label>
-          <input type="text" data-ng-model="customer.name" placeholder="Enter Customer Name ..">
+          <input type="text" data-ng-model="customer.cust_name" placeholder="Enter Customer Name ..">
         </ion-item>
         <ion-item>
           <label>
             Contact :
           </label>
-          <input type="number" ng-model="customer.contact" placeholder="Enter Contact ..">
+          <input type="number" ng-model="customer.cust_contact" placeholder="Enter Contact ..">
         </ion-item>
         <ion-item>
           <label>
             State :
           </label>
-          <select ng-model="customer.state">
+          <select ng-model="customer.cust_state">
             <option>Blue</option>
             <option selected>Green</option>
             <option>Red</option>
@@ -32,7 +50,7 @@
           <label>
             City :
           </label>
-          <select ng-model="customer.city">
+          <select ng-model="customer.cust_city">
             <option>Blue</option>
             <option selected>Green</option>
             <option>Red</option>
@@ -42,14 +60,14 @@
           <label>
             Address :
           </label>
-          <input type="text" ng-model="customer.address" placeholder="Enter Address ..">
+          <input type="text" ng-model="customer.cust_address" placeholder="Enter Address ..">
 
         </ion-item>
         <ion-item>
           <label>
             PIN :
           </label>
-          <input type="text" ng-model="customer.pin" placeholder="Enter PIN ..">
+          <input type="text" ng-model="customer.cust_pin" placeholder="Enter PIN ..">
 
         </ion-item>
 

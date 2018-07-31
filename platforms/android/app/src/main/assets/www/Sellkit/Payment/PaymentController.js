@@ -4,6 +4,8 @@ app.controller('PaymentCtrl', ['$scope', '$state', '$stateParams',
     var productList = $stateParams.productList;
     var kitDetails = $stateParams.Kitdetail;
     $scope.paymentDetail = {};
+    if ($stateParams.payment != null || $stateParams.payment != undefined)
+      $scope.paymentDetail = $stateParams.payment
 
     $scope.submit = function () {
       var paymentDetails = {};
@@ -18,7 +20,7 @@ app.controller('PaymentCtrl', ['$scope', '$state', '$stateParams',
 
     }
     $scope.backtokit = function () {
-      $state.go('app.Sellkit.kitDetail', { customer: customer, productList: productList, productDetails: null, Kitdetail: kitDetails, payment: $scope.paymentDetail });
+      $state.go('app.kitDetail', { customer: customer, productList: productList, Kitdetail: kitDetails, payment: $scope.paymentDetail });
     };
     $scope.reset = function () {
       $scope.paymentDetails = {};

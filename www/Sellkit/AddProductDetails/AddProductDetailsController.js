@@ -1,20 +1,26 @@
 app.controller('AddProductDetailsCtrl', ['$scope', '$state', '$stateParams', '$rootScope',
   function ($scope, $state, $stateParams, $rootScope) {
     $scope.product = {};
-    //$scope.productList = [];
-    var customer = $stateParams.customer;
-    $scope.productList = $stateParams.productList;
 
+    var customer = $stateParams.customer;
+    var kitDetail = $stateParams.Kitdetail;
+    var payment = $stateParams.payment;
+    if ($stateParams.productList != null || $stateParams.productList != undefined) {
+      $scope.productList = $stateParams.productList;
+    }
+    else {
+      $scope.productList = [];
+    }
 
     $scope.backToList = function () {
-      $state.go('app.Sellkit.AddProduct', { customer: customer, productList: $scope.productList, productDetails: $scope.product, Kitdetail: null, payment: null });
+      $state.go('app.Sellkit.AddProduct', { customer: customer, productList: $scope.productList, Kitdetail: kitDetail, payment: payment });
     };
-    var newProduct = {};
+    $scope.newProduct = {};
     $scope.reset = function () {
-      newProduct = {};
+      $scope.newProduct = {};
     };
     $scope.productAdded = function () {
-      newProduct = {};
+
       newProduct.prod_category = $scope.product.category;
       newProduct.prod_InvoiceAvailable;
       newProduct.prod_BrandName = $scope.product.brandName;
@@ -28,8 +34,10 @@ app.controller('AddProductDetailsCtrl', ['$scope', '$state', '$stateParams', '$r
       newProduct.prod_price = $scope.product.price;
       //$scope.product = newProduct;
       console.log(newProduct);
+      $scope.productList.push(newProduct);
 
 
-      $state.go('app.Sellkit.AddProduct', { customer: customer, productList: $scope.productList, productDetails: newProduct, Kitdetail: null, payment: null });
+
+      $state.go('app.Sellkit.AddProduct', { customer: customer, productList: $scope.productList, Kitdetail: kitDetail, payment: payment });
     }
   }]);

@@ -4,6 +4,7 @@ app.controller('KitDetailCtrl', ['$scope', '$state', '$stateParams',
     $scope.kitDetails = {};
     var customer = $stateParams.customer;
     var productList = $stateParams.productList;
+    var payment = $stateParams.payment;
 
     if ($stateParams.Kitdetail != null || $stateParams.Kitdetail != undefined) {
       var kitDetails = $stateParams.Kitdetail;
@@ -13,6 +14,8 @@ app.controller('KitDetailCtrl', ['$scope', '$state', '$stateParams',
     var productList = $stateParams.productList;
     if (customer != null || customer != undefined)
       $scope.customer.contact = customer.cust_contact;
+    if ($stateParams.kitDetail != null || $stateParams.kitDetail != undefined)
+      $scope.kitDetails = $stateParams.kitDetail;
 
     $scope.gotopayments = function () {
       var kitDetail = {};
@@ -20,10 +23,10 @@ app.controller('KitDetailCtrl', ['$scope', '$state', '$stateParams',
       kitDetail.OTP = $scope.kitDetails.OTP;
       kitDetail.activationCode = $scope.kitDetails.activationCode
       $scope.kitDetails = kitDetail;
-      $state.go('app.Sellkit.payments', { customer: customer, productList: productList, productDetails: null, Kitdetail: $scope.kitDetails, payment: null });
+      $state.go('app.payments', { customer: customer, productList: productList, Kitdetail: $scope.kitDetails, payment: payment });
     };
     $scope.backtoProduct = function () {
-      $state.go('app.Sellkit.AddProduct', { customer: customer, productList: productList, productDetails: null, Kitdetail: $scope.kitDetails, payment: null });
+      $state.go('app.AddProduct', { customer: customer, productList: productList, Kitdetail: $scope.kitDetails, payment: payment });
     };
     $scope.reset = function () {
       $scope.kitDetails = {};

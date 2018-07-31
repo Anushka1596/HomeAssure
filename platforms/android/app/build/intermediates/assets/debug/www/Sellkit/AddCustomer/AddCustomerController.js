@@ -1,6 +1,13 @@
-app.controller('AddCustomerCtrl', ['$scope', '$state',
-  function ($scope, $state) {
+app.controller('AddCustomerCtrl', ['$scope', '$state', '$stateParams',
+  function ($scope, $state, $stateParams) {
     $scope.customer = {};
+    var kitDetail = $stateParams.Kitdetail;
+    var payment = $stateParams.payment;
+    var productList = $stateParams.productList;
+    if ($stateParams.customer != null || $stateParams.customer != undefined) {
+      $scope.customer = $stateParams.customer;
+      console.log($scope.customer);
+    }
     $scope.Save = function () {
       $state.go('app.Sellkit.AddProduct');
     }
@@ -9,15 +16,16 @@ app.controller('AddCustomerCtrl', ['$scope', '$state',
     }
     $scope.saveCustomer = function () {
       var customer = {};
-      customer.cust_name = $scope.customer.name;
-      customer.cust_contact = $scope.customer.contact;
-      customer.cust_state = $scope.customer.state;
-      customer.cust_city = $scope.customer.city;
-      customer.cust_address = $scope.customer.address;
-      customer.cust_pin = $scope.customer.pin;
+      customer.cust_name = $scope.customer.cust_name;
+      customer.cust_contact = $scope.customer.cust_contact;
+      customer.cust_state = $scope.customer.cust_state;
+      customer.cust_city = $scope.customer.cust_city;
+      customer.cust_address = $scope.customer.cust_address;
+      customer.cust_pin = $scope.customer.cust_pin;
       $scope.customer = customer;
       //console.log(customer);
-      $state.go('app.Sellkit.AddProduct', { customer: customer, productList: null, productDetails: null, Kitdetail: null, payment: null });
+      var kitDetail = $stateParams.Kitdetail;
+      $state.go('app.Sellkit.AddProduct', { customer: $scope.customer, productList: productList, Kitdetail: kitDetail, payment: payment });
     }
 
   }])

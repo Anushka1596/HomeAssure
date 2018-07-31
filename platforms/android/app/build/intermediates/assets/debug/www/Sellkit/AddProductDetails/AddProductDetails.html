@@ -1,6 +1,24 @@
 <ion-view view-title="Add Customer" name="profile-view">
   <ion-header-bar class="bar-calm" align="center">
     <h1 class="title">Add Product Details</h1>
+    <div>
+      <ion-tabs class="tabs-stipped tabs-top tabs-dark">
+
+        <ion-tab title="Add Customer >>">
+          <ion-nav-view></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Add Product >>">
+          <ion-nav-view></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Enter Kit Details >>">
+          <ion-nav-view></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="Payments">
+          <ion-nav-view></ion-nav-view>
+        </ion-tab>
+
+      </ion-tabs>
+    </div>
   </ion-header-bar>
   <ion-content class="has-header padding has-subheader has-footer">
     <form>
@@ -23,42 +41,28 @@
             <ion-checkbox disabled="true" value="Yes" name="group1">Yes</ion-checkbox>
             <ion-checkbox disabled="true" value="No" name="group1">No</ion-checkbox>
           </div>
-          <div class="list">
-            <label class="item item-radio">
-              <input type="radio" name="group1" />
-              <div class="item-content">
-                Choice 1
-              </div>
-              <i class="radio-icon ion-checkmark"></i>
-            </label>
 
-            <label class="item item-radio">
-              <input type="radio" name="group1" />
-              <div class="item-content">
-                Choice 2
-              </div>
-              <i class="radio-icon ion-checkmark"></i>
-            </label>
-          </div>
         </ion-item>
-        <div class="row">
-          <div class="col col-30">
-            <label>Brand Name :</label>
-          </div>
-          <div class="col col-30">
-            <select ng-model="product.brandName">
-              <option>Blue</option>
-              <option selected>Green</option>
-              <option>Red</option>
-            </select>
+        <ion-item>
+          <div class="row">
+            <div class="col col-30">
+              <label>Brand Name :</label>
+            </div>
+            <div class="col col-30">
+              <select ng-model="product.brandName">
+                <option>Blue</option>
+                <option selected>Green</option>
+                <option>Red</option>
+              </select>
 
-          </div>
-          <div class="col col-20">
-            <input type="text" ng-model="product.brandOthers" placeholder="Others" />
-          </div>
-          <div class="col col-20">
-            <input type="text" ng-model="product.brandText" placeholder="Text" />
-          </div>
+            </div>
+        </ion-item>
+        <div class="col col-20">
+          <input type="text" ng-model="product.brandOthers" placeholder="Others" />
+        </div>
+        <div class="col col-20">
+          <input type="text" ng-model="product.brandText" placeholder="Text" />
+        </div>
         </div>
         </ion-item>
 
@@ -117,7 +121,7 @@
         <button class="button btn-calm" align="right" ng-click="backToList()">Back</button>
       </div>
       <div class="col col-40">
-        <button class="button btn-calm" align="right" ng-click="Cancel()">Cancel</button>
+        <button class="button btn-calm" align="right" ng-click="reset()">Reset</button>
       </div>
       <div class="col col-40">
         <button class="button btn-calm" align="left" ng-click="productAdded()">Add</button>
