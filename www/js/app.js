@@ -44,7 +44,7 @@ var app = angular.module('HomeAssure', ['ionic', 'ui.router'])
           templateUrl: 'Sellkit/Sellkit.html',
           controller: 'SellkitCtrl'
         })
-        .state('app.Sellkit.AddCustomer', {
+        .state('app.AddCustomer', {
           url: '/addCustomer',
           params: { customer: null, productList: null, productDetails: null, Kitdetail: null, payment: null },
 
