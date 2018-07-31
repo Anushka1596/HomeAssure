@@ -9,7 +9,7 @@ app.controller('AddCustomerCtrl', ['$scope', '$state', '$stateParams',
       console.log($scope.customer);
     }
     $scope.Save = function () {
-      $state.go('app.Sellkit.AddProduct');
+      $state.go('app.AddProduct');
     }
     $scope.reset = function () {
       $scope.customer = {};
@@ -25,7 +25,7 @@ app.controller('AddCustomerCtrl', ['$scope', '$state', '$stateParams',
       $scope.customer = customer;
       //console.log(customer);
       var kitDetail = $stateParams.Kitdetail;
-      $state.go('app.Sellkit.AddProduct', { customer: $scope.customer, productList: productList, Kitdetail: kitDetail, payment: payment });
+      $state.go('app.AddProduct', { customer: $scope.customer, productList: productList, Kitdetail: kitDetail, payment: payment });
     }
 
   }])
