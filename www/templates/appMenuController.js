@@ -4,7 +4,7 @@ app.controller('AppMenuCtrl', ['$scope', '$ionicSideMenuDelegate', '$state',
       $state.go('app.home');
     }
     $scope.gotoSellkit = function () {
-      $state.go('app.Sellkit.AddCustomer');
+      $state.go('app.AddCustomer');
     }
     $scope.gotoSoldkit = function () {
       $state.go('app.SoldkitList');

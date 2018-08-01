@@ -12,12 +12,12 @@ app.controller('AddProductCtrl', ['$scope', '$state', '$stateParams', '$rootScop
     }
     $scope.addProduct = function () {
       //console.log($scope.Products);
-      $state.go('app.Sellkit.AddProductDetails', { customer: customer, productList: $scope.Products, Kitdetail: kitDetail, payment: payment });
+      $state.go('app.AddProductDetails', { customer: customer, productList: $scope.Products, Kitdetail: kitDetail, payment: payment });
     }
     $scope.gotokit = function () {
-      $state.go('app.Sellkit.kitDetail', { customer: customer, productList: $scope.Products, Kitdetail: kitDetail, payment: payment });
+      $state.go('app.kitDetail', { customer: customer, productList: $scope.Products, Kitdetail: kitDetail, payment: payment });
     }
     $scope.backtoCustomer = function () {
-      $state.go('app.Sellkit.AddCustomer', { customer: customer, productList: $scope.Products, Kitdetail: kitDetail, payment: payment });
+      $state.go('app.AddCustomer', { customer: customer, productList: $scope.Products, Kitdetail: kitDetail, payment: payment });
     }
   }])
