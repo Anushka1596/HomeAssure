@@ -37,13 +37,13 @@ app.controller('HomeCtrl', ['$scope','$state','ionicDatePicker',function ($scope
     $scope.toDate = null;
   };
 
-  values = [1000,2000,500,200];
+  values = [5000,2000,5000,2000,3000,6000];
   drawChart(values,"#chart",10); // You can adjust the margin between each bar by changing 10 to whatever you like
 
   function drawChart(data,selector,padding){
   var max = Math.max.apply(Math, data);
 	var chart = document.querySelector(selector);
-	var barwidth = ((chart.offsetWidth-(values.length-1)*padding-(data.length)*10)/data.length);
+	var barwidth = 40;
 	var sum = data.reduce(function(pv, cv) { return pv + cv; }, 0);
 	var left = 0;
 	for (var i = 0; i< data.length;i++){
