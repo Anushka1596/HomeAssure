@@ -37,24 +37,25 @@ app.controller('HomeCtrl', ['$scope','$state','ionicDatePicker',function ($scope
     $scope.toDate = null;
   };
 
- /* values = [5000,2000,5000,2000,3000,6000];
-  drawChart(values,"#chart",11); // You can adjust the margin between each bar by changing 10 to whatever you like
-
+  $scope.values = [5000,2000,5000,2000,3000,6000];
+  drawChart($scope.values,"#chart",11); // You can adjust the margin between each bar by changing 10 to whatever you like
+  $scope.heightper = [];
   function drawChart(data,selector,padding){
   var max = Math.max.apply(Math, data);
 	var chart = document.querySelector(selector);
-	var barwidth = 40;
-	var sum = data.reduce(function(pv, cv) { return pv + cv; }, 0);
-	var left = 0;
+	//var barwidth = 40;
+	//var sum = data.reduce(function(pv, cv) { return pv + cv; }, 0);
+	//var left = 15;
 	for (var i = 0; i< data.length;i++){
-	  var newbar = document.createElement('div');
+	  var newbar = document.createElement('col');
 	  newbar.setAttribute("class", "bar");
-	  newbar.style.width=barwidth+"px";
-	  newbar.style.height=((data[i]/max)*100)+"%";
-	  newbar.style.left=left+"px";
+	  //newbar.style.width=barwidth+"px";
+    newbar.style.height=((data[i]/max)*100)+"%";
+    //$scope.heightper.push();
+	  //newbar.style.left=left+"px";
 	  chart.appendChild(newbar);
-	  left += (barwidth+padding+10);
-	}
-};*/
+	  //left += (barwidth+padding+10);
+  }
+};
   
 }]);

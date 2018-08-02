@@ -15,11 +15,11 @@
           <ion-tab title="Total"> </ion-tab>
           <ion-tab title="Custom" ng-click="openfilter()"></ion-tab>
         </ion-tabs>
-      </ion-toolbar>
+      </ion-toolbar>  
     </div>
 
   </ion-header>
-  <ion-content class="padding has-header has-subheader">
+  <ion-content class="padding has-header has-subheader has-footer has-subfooter">
     <ion-scroll direction="x" class="wide-as-needed">
       <div class="row container">
         <div class="card-container ">
@@ -58,14 +58,13 @@
     <div class="container">
       <h1>%</h1>
     </div>
-    <div class="bargraph">
-        <!--<div class="wrapper">
-            <div id="chart"></div>  
-        </div>-->
-        <div align="center" padding="20px" style="margin-top:50%">
-            <button class="button button-positive" ng-click="backtosold()">Back</button>
-        </div> 
-    </div>
+      <div class="wrapper" style="border:1px solid">
+          <h2 align="center">Monthly Sales</h2>
+            <div class="row"><div class="col" ng-repeat="v in values track by $index">{{v}}</div></div>
+            <div class="row"><div id="chart" style="margin-bottom:1%"></div></div>  
+            <div class="row"><div class="col" ng-repeat="v in values track by $index">month</div></div>
+      </div>
+  
     
   </ion-content>
 </ion-view>

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\zopper\\HomeAssure\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-xxxhdpi_screen.png.flat",
-        "source": "C:\\Users\\zopper\\HomeAssure\\platforms\\android\\app\\src\\main\\res\\drawable-port-xxxhdpi\\screen.png"
-    },
-    {
         "merged": "C:\\usr\\local\\var\\www\\HomeAssure-App\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-ldpi_screen.png.flat",
         "source": "C:\\usr\\local\\var\\www\\HomeAssure-App\\platforms\\android\\app\\src\\main\\res\\drawable-land-ldpi\\screen.png"
+    },
+    {
+        "merged": "C:\\Users\\zopper\\HomeAssure\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-xxxhdpi_screen.png.flat",
+        "source": "C:\\Users\\zopper\\HomeAssure\\platforms\\android\\app\\src\\main\\res\\drawable-port-xxxhdpi\\screen.png"
     },
     {
         "merged": "C:\\usr\\local\\var\\www\\HomeAssure-App\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xhdpi_screen.png.flat",

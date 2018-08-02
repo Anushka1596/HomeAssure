@@ -37,15 +37,15 @@ app.controller('HomeCtrl', ['$scope','$state','ionicDatePicker',function ($scope
     $scope.toDate = null;
   };
 
-  values = [5000,2000,5000,2000,3000,6000];
-  drawChart(values,"#chart",10); // You can adjust the margin between each bar by changing 10 to whatever you like
+  $scope.values = [5000,2000,5000,2000,3000,6000];
+  drawChart($scope.values,"#chart",12); // You can adjust the margin between each bar by changing 10 to whatever you like
 
   function drawChart(data,selector,padding){
   var max = Math.max.apply(Math, data);
 	var chart = document.querySelector(selector);
-	var barwidth = 40;
+	var barwidth = 35;
 	var sum = data.reduce(function(pv, cv) { return pv + cv; }, 0);
-	var left = 0;
+	var left = 15;
 	for (var i = 0; i< data.length;i++){
 	  var newbar = document.createElement('div');
 	  newbar.setAttribute("class", "bar");
@@ -54,7 +54,8 @@ app.controller('HomeCtrl', ['$scope','$state','ionicDatePicker',function ($scope
 	  newbar.style.left=left+"px";
 	  chart.appendChild(newbar);
 	  left += (barwidth+padding+10);
-	}
+  }
+  var bar = document.createElement('div');
 };
   
 }]);
