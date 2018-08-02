@@ -72,4 +72,28 @@ span.psw {
   span div {
     background-color:#DEF5FF;
     margin: 1%;
+    
+}
+.element::-webkit-input-placeholder {
+  color: blue;
+  font-weight: bold;
+}
+select {
+  width: 250px;
+  margin: 10px;
+}
+.button {
+  
+  border: none;
+  color: blue;
+  padding: 18px 32px;
+  text-align: center;
+  text-decoration: none;
+  display:block;
+  font-size: 16px;
+  
+}
+div {
+  display: block;
+  font-weight: bold;
 }

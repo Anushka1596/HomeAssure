@@ -1,4 +1,4 @@
-app.controller('PaymentCtrl', ['$scope', '$state', '$stateParams', '$ionicPopup'
+app.controller('PaymentCtrl', ['$scope', '$state', '$stateParams', '$ionicPopup',
   function ($scope, $state, $stateParams, $ionicPopup) {
     var customer = $stateParams.customer;
     var productList = $stateParams.productList;

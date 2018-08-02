@@ -13,14 +13,14 @@ app.controller('AddProductDetailsCtrl', ['$scope', '$state', '$stateParams', '$r
     }
 
     $scope.backToList = function () {
-      $state.go('app.Sellkit.AddProduct', { customer: customer, productList: $scope.productList, Kitdetail: kitDetail, payment: payment });
+      $state.go('app.AddProduct', { customer: customer, productList: $scope.productList, Kitdetail: kitDetail, payment: payment });
     };
     $scope.newProduct = {};
     $scope.reset = function () {
       $scope.newProduct = {};
     };
     $scope.productAdded = function () {
-
+      newProduct = {};
       newProduct.prod_category = $scope.product.category;
       newProduct.prod_InvoiceAvailable;
       newProduct.prod_BrandName = $scope.product.brandName;
@@ -38,6 +38,6 @@ app.controller('AddProductDetailsCtrl', ['$scope', '$state', '$stateParams', '$r
 
 
 
-      $state.go('app.Sellkit.AddProduct', { customer: customer, productList: $scope.productList, Kitdetail: kitDetail, payment: payment });
+      $state.go('app.AddProduct', { customer: customer, productList: $scope.productList, Kitdetail: kitDetail, payment: payment });
     }
   }]);

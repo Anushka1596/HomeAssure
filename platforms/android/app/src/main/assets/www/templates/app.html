@@ -7,28 +7,24 @@
 
   <ion-tabs class="tabs-striped tabs-icon-top tabs-color-active-positive" position="bottom">
 
-    <!-- Dashboard Tab -->
-    <ion-tab title="Home" icon="ion-ios-pulse" ng-click="gotoHome()">
-      <ion-nav-view name="home-tab"></ion-nav-view>
-    </ion-tab>
 
-    <!-- Chats Tab -->
-    <ion-tab title="Sell Kits " icon="ion-ios-chatboxes-outline " ng-click="gotoSellkit()">
-
-    </ion-tab>
-
-    <!-- Account Tab -->
-    <ion-tab title="Sold Kits " icon="ion-ios-gear" ng-click="gotoSoldkit()" ui-sref-active="active">
+    <ion-tab title="Home" icon="ion-ios-pulse" ui-sref="app.home" ui-sref-active="active" ng-click="gotoHome()">
       <ion-nav-view></ion-nav-view>
     </ion-tab>
-    <ion-tab title="Account " icon="ion-ios-gear" ng-click="gotoAccount()" tabsHighlight="true">
+
+
+    <ion-tab title="Sell Kits " icon="ion-ios-chatboxes-outline" ui-sref="app.AddCustomer" ui-sref-active="active" ng-click="gotoSellkit()">
       <ion-nav-view></ion-nav-view>
     </ion-tab>
-    <ion-tab title="Test" icon-off="ion-ios-gear-outline " icon-on="ion-ios-gear " ng-click="gotoHome()" ui-sref-active="active">
-      <a></a>
-    </ion-tab>
-    <ion-tab title="Account " icon-off="ion-ios-gear-outline " icon-on="ion-ios-gear " ng-click="gotoAccount() ">
+
+
+    <ion-tab title="Sold Kits " icon="ion-ios-gear" ui-sref="app.SoldkitList" ui-sref-active="active" ng-click="gotoSoldkit()">
       <ion-nav-view></ion-nav-view>
     </ion-tab>
+
+    <ion-tab title="Account " icon="ion-ios-gear" ui-sref="app.Account" ui-sref-active="active" ng-click="gotoAccount()">
+      <ion-nav-view></ion-nav-view>
+    </ion-tab>
+
   </ion-tabs>
 </ion-view>

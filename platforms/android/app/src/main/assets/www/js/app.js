@@ -44,7 +44,7 @@ var app = angular.module('HomeAssure', ['ionic', 'ui.router'])
           templateUrl: 'Sellkit/Sellkit.html',
           controller: 'SellkitCtrl'
         })
-        .state('app.Sellkit.AddCustomer', {
+        .state('app.AddCustomer', {
           url: '/addCustomer',
           params: { customer: null, productList: null, productDetails: null, Kitdetail: null, payment: null },
 
@@ -52,21 +52,21 @@ var app = angular.module('HomeAssure', ['ionic', 'ui.router'])
           controller: 'AddCustomerCtrl'
         })
 
-        .state('app.Sellkit.AddProduct', {
+        .state('app.AddProduct', {
           url: '/addProduct',
           params: { customer: null, productList: null, productDetails: null, Kitdetail: null, payment: null },
 
           templateUrl: 'Sellkit/AddProduct/AddProduct.html',
           controller: 'AddProductCtrl'
         })
-        .state('app.Sellkit.AddProductDetails', {
+        .state('app.AddProductDetails', {
           url: '/addProductDetails',
           params: { customer: null, productList: null, productDetails: null, Kitdetail: null, payment: null },
 
           templateUrl: 'Sellkit/AddProductDetails/AddProductDetails.html',
           controller: 'AddProductDetailsCtrl'
         })
-        .state('app.Sellkit.kitDetail', {
+        .state('app.kitDetail', {
           url: '/kitDetail',
           params: { customer: null, productList: null, productDetails: null, Kitdetail: null, payment: null },
 
@@ -74,7 +74,7 @@ var app = angular.module('HomeAssure', ['ionic', 'ui.router'])
           controller: 'KitDetailCtrl'
         })
 
-        .state('app.Sellkit.payments', {
+        .state('app.payments', {
           url: '/payments',
           params: { customer: null, productList: null, productDetails: null, Kitdetail: null, payment: null },
 

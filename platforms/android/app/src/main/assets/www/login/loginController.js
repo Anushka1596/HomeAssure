@@ -4,8 +4,8 @@ app.controller('LoginCtrl', ['HomeAssureFactory', '$scope', '$timeout', '$ionicM
     $scope.data = {};
     var username = $scope.data.username;
     var password = $scope.data.password;
-    console.log(username);
-    console.log(password);
+    // console.log(username);
+    //console.log(password);
     $scope.login = function () {
       HomeAssureFactory.Login($scope.data.username, $scope.data.password)
         .success(function (data) {

@@ -1,87 +1,154 @@
 <ion-view view-title="Add Customer" name="profile-view">
-  <ion-header>
-    <ion-header-bar class="bar-calm" align="center">
-      <h1 class="title">Add Customer</h1>
-    </ion-header-bar>
-    <ion-tabs class="tabs-stipped tabs-top tabs-dark">
-      <ion-tab title="Add Customer >>">
+  <ion-header-bar class="bar-calm" align="center">
+    <h1 class="title">Add Customer</h1>
+  </ion-header-bar>
+  <ion-content class="has-header padding has-subheader">
+    <div class="container">
 
-      </ion-tab>
-      <ion-tab title="Add Product >>">
-
-      </ion-tab>
-      <ion-tab title="Enter Kit Details >>">
-
-      </ion-tab>
-      <ion-tab title="Payments">
-
-      </ion-tab>
-    </ion-tabs>
-  </ion-header>
-  <ion-content class="has-header padding has-subheader has-footer has-subfooter">
-    <form>
-      <ion-list>
-        <ion-item>
-          <label>
-            Customer Name :
-          </label>
-          <input type="text" data-ng-model="customer.cust_name" placeholder="Enter Customer Name ..">
-        </ion-item>
-        <ion-item>
-          <label>
-            Contact :
-          </label>
-          <input type="number" ng-model="customer.cust_contact" placeholder="Enter Contact ..">
-        </ion-item>
-        <ion-item>
-          <label>
-            State :
-          </label>
-          <select ng-model="customer.cust_state">
+    </div>
+  <!--  <div class="container">
+      <div class="row">
+        <div class="col col-30">
+          <label>Customer Name</label>
+        </div>
+        <div class="col col-7,0">
+          <input type="text" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-30">
+          <label>Contact</label>
+        </div>
+        <div class="col col-70">
+          <input type="number" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-30">
+          <label>State</label>
+        </div>
+        <div class="col col-70">
+          <select>
             <option>Blue</option>
             <option selected>Green</option>
             <option>Red</option>
           </select>
-        </ion-item>
 
-        <ion-item>
-          <label>
-            City :
-          </label>
-          <select ng-model="customer.cust_city">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-30">
+          <label>City</label>
+        </div>
+        <div class="col col-70">
+          <select>
             <option>Blue</option>
             <option selected>Green</option>
             <option>Red</option>
           </select>
-        </ion-item>
-        <ion-item>
-          <label>
-            Address :
-          </label>
-          <input type="text" ng-model="customer.cust_address" placeholder="Enter Address ..">
 
-        </ion-item>
-        <ion-item>
-          <label>
-            PIN :
-          </label>
-          <input type="text" ng-model="customer.cust_pin" placeholder="Enter PIN ..">
-
-        </ion-item>
-
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-30">
+          <label>Address</label>
+        </div>
+        <div class="col col-70">
+          <input type="text" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-30">
+          <label>PIN</label>
+        </div>
+        <div class="col col-70">
+          <input type="text" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-50">
+        <button class="button btn-calm">Reset</button>
+      </div>
+      <div class="col col-50">
+        <button class="button btn-calm" ng-click="AddProduct.html">Save and Proceed</button>
+      </div>
+    </div> -->
+    <div class = "list">
+      <label class = "item item-input">
         <div class="row">
           <div class="col col-50">
-            <button class="button btn-calm" ng-click="reset()">Reset</button>
-          </div>
+        
+          <div> Customer Name: </div></div>
           <div class="col col-50">
-            <button class="button btn-calm" ng-click="saveCustomer()">Save and Proceed</button>
-          </div>
+          <input type = "textbox" /></div>
         </div>
-
-
-      </ion-list>
-    </form>
-
-
+      </label>
+   
+      
+        <label class = "item item-input">
+            <div class="row">
+                <div class="col col-50">
+              
+                  <div> Contact:  </div></div>
+            <div class="col col-50">
+           <input type = "textbox" /></div>
+           </div>
+        </label>
+        
+          <label class = "item item-input">
+              <div class="row">
+                  <div class="col col-50">
+              <div> State: </div></div>
+              <div class="col col-50">
+             
+             <select >
+              <option>Blue</option>
+              <option selected>Green</option>
+              <option>Red</option>
+            </select></div>
+          </div>  
+          </label>
+          
+            <label class = "item item-input">
+                <div class="row">
+                    <div class="col col-50">
+                <div> City:  </div></div>
+               <select style="max-width:50% width 30px;" >
+                  <div class="col col-50">
+                <option>Blue</option>
+                <option selected>Green</option>
+                <option>Red</option></div>
+              </select>
+              </div>
+            </label>
+            
+              <label class = "item item-input">
+                  <div class="row">
+                  <div class="col col-50">
+                  <div> Address:  </div></div>
+                  <div class="col col-50">
+                 <input type = "TextArea"  /></div>
+                 </div>
+              </label>
+              
+                <label class = "item item-input">
+                    <div class="row">
+                    <div class="col col-50">
+                    <div> Pin:  </div></div>
+                    <div class="col col-50">
+                   <input type = "textbox" /></div>
+                   </div>
+                </label>
+                <label class = "button">
+                    <div class="row">
+                    <div class="col col-50">
+                  <input type = "reset" placeholder = "Reset" margin=5px/> </div>
+                  <div class="col col-50">
+                  <input type = "button" value="Save & Proceed"  margin=5px /></div>
+                  </div>
+               </label>
+                                 
+   </div>
   </ion-content>
 </ion-view>
