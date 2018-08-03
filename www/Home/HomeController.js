@@ -43,18 +43,18 @@ app.controller('HomeCtrl', ['$scope','$state','ionicDatePicker',function ($scope
   function drawChart(data,selector,padding){
   var max = Math.max.apply(Math, data);
 	var chart = document.querySelector(selector);
-	//var barwidth = 40;
-	//var sum = data.reduce(function(pv, cv) { return pv + cv; }, 0);
-	//var left = 15;
+	var barwidth = 35;
+	var sum = data.reduce(function(pv, cv) { return pv + cv; }, 0);
+	var left = 20;
 	for (var i = 0; i< data.length;i++){
-	  var newbar = document.createElement('col');
+	  var newbar = document.createElement('div');
 	  newbar.setAttribute("class", "bar");
-	  //newbar.style.width=barwidth+"px";
+	  newbar.style.width=barwidth+"px";
     newbar.style.height=((data[i]/max)*100)+"%";
     //$scope.heightper.push();
-	  //newbar.style.left=left+"px";
+	  newbar.style.left=left+"px";
 	  chart.appendChild(newbar);
-	  //left += (barwidth+padding+10);
+	  left += (barwidth+padding+10);
   }
 };
   
